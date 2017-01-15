@@ -248,7 +248,59 @@ var gmap = function(){
 	 }
 	
 };
+
+/* Dock menu to top of page for inner navmenu */
 	
+var dockInnerNav = function(){
+	
+	
+	if( $("#nav-inner").exists() )  {	
+		
+		$(window).scroll(function() {  
+
+			var scroll = $(window).scrollTop();
+			var nav = $("#nav-inner");
+
+			if (scroll >= 500) {
+			nav.addClass("navbar-fixed-top");
+			} else {
+			nav.removeClass("navbar-fixed-top");
+			}
+       
+		});
+
+	}
+
+};	
+	
+
+
+
+var toggle_panel = function(){
+	
+ if( $(".toggle-panel").exists() )  {	
+  	
+   $('.toggle-panel h4').on('click', function(event){
+        event.preventDefault();
+        // create accordion variables
+        var accordion = $(this);
+        var accordionContent = accordion.next('p');
+
+        // toggle accordion link open class
+        accordion.toggleClass("active");
+        // toggle accordion content
+        accordionContent.slideToggle(500);
+
+    });	
+	 
+
+	
+ }
+
+};
+								 
+
+
 
 
 ////////////////////////////////////////// Begin document ready function /////////////////////////////////////////
@@ -261,11 +313,13 @@ $(function(){
     bgSlideshow();
 	scrollTexts();
 	fixTexts();
+	dockInnerNav();
 	testimonials();
 	clients();
 	backTop();
 	counter();
 	gmap();
+	toggle_panel();
 	
 		
 	
@@ -339,6 +393,9 @@ if( $("#nav-menu").exists() )  {
 
     });
 	
+	
+	
+
 	
 
 	/* Search toggle */
