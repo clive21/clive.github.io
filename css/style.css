@@ -431,19 +431,16 @@
 		float:left;
 		margin-right:25px;
 		text-align:center;
-		background-color:#f8f8f8;
-		border-bottom:1px solid #e5e5e5;
 		height:185px;
 		margin-bottom:30px;
 		width:180px;
 	}
 	#portfolio-list li:hover {
-		border-bottom:1px solid #fdc62a;
-		height:185px;
+		
 	}
 	#portfolio-list img {
 		background-color:#FFF;
-		height:120px; 
+		height:185px; 
 		width:180px;
 	}
 	#portfolio-list li:hover .title {

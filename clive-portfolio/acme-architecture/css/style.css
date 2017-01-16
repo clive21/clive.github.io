@@ -1454,6 +1454,11 @@ blockquote {
 	background: url(../images/icons/next.png) no-repeat center center;
 }
 
+@media screen and (max-width:1280px) {
+	.clients .owl-theme .owl-controls{display: none !important;}
+}
+
+
 
 
 /* Counter */
