@@ -184,6 +184,7 @@ jQuery(document).ready(function(){
 
 $(function () {
 
+	/*
 	var beUsername = 'clive21',
 		beApiKey = '2OP9FlG3eiW0dMEQbRQeTOwOOJeGeZ29',
 		bePerPage = 12,
@@ -192,11 +193,11 @@ $(function () {
 		beItemHeight = 282,
 		beLazyLoad = true,
 		beLinkTarget = '_self';
+	*/
 
-	/**
-	 * Get Data from Behance API
-	 */
-	if (sessionStorage.getItem('behanceProject')) {
+	/** Get Data from Behance API */
+	
+	/*if (sessionStorage.getItem('behanceProject')) {
 		setPortfolioTemplate();
 	} else {
 		// Load JSON-encoded data from the Behance API & Store it in sessionStorage
@@ -204,11 +205,11 @@ $(function () {
 			sessionStorage.setItem('behanceProject', JSON.stringify(project));
 			setPortfolioTemplate();
 		});
-	}
+	}*/
 
-	/**
-	 * Populate Data
-	 */
+	/*** Populate Data*/
+	
+	/*
 	function setPortfolioTemplate() {
 		var projects = JSON.parse(sessionStorage.getItem('behanceProject')).projects;
 		var portfolio = $('#portfolio-list').html('');
@@ -246,6 +247,8 @@ $(function () {
 
 		
 	}
+	
+	*/
 
 });
 

@@ -280,7 +280,7 @@ var toggle_panel = function(){
 	
  if( $(".toggle-panel").exists() )  {	
   	
-   $('.toggle-panel h4').on('click', function(event){
+   $('.toggle-panel h5').on('click', function(event){
         event.preventDefault();
         // create accordion variables
         var accordion = $(this);
@@ -392,6 +392,20 @@ if( $("#nav-menu").exists() )  {
          }, 1000);
 
     });
+	
+	
+	
+	
+	
+	/* fancybox plugin*/
+	if ( $().fancybox ) {
+	    $(".fancybox").fancybox({
+			padding : 0
+		});
+	}
+	
+	
+	
 	
 	
 	

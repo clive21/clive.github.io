@@ -537,7 +537,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .service-list-tabs li a:hover{color:#ffc925;}
 .service-list-tabs li a img {width: 40px; height: 40px;  margin: 0 30px 0 0;}
 
-.services-tabs-desc{padding: 0 0 10px 40px;}
+.services-tabs-desc{padding: 0 0 60px 40px;}
 .services-tabs-desc img{width: 100%; height: auto; display: block; margin: 0 0 30px 0;}
 .services-tabs-desc h5{color: #6a6a6a; font-size: 18px; line-height: 24px; text-transform: uppercase; font-weight: 700; margin: 0 0 30px 0;}
 .services-tabs-desc p{text-align: left; margin: 0 0 30px 0; line-height: 24px;}
@@ -553,7 +553,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	#tab-section{margin: 20px 0 0 0;}
 	.service-list-tabs{border-right:none;}
 	.service-list-tabs li{display:inline-block;}
-	.services-tabs-desc{padding: 0;}
+	.services-tabs-desc{padding-left: 0;}
 	.service-list-tabs li:hover, .service-list-tabs li.active{border-right: none;}
 	.service-list-tabs li a{display: inline-block; padding: 0 20px 5px 0;}
 }
@@ -570,7 +570,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 /* Portfolio section */
 .section-item.section-dark{background-color: #252525;}
-.section-item.section-dark h2{color: #FFFFFF;}
+.section-item.section-dark h2, .section-item.section-dark p{color: #FFFFFF;}
 
 .item-sorter {
     list-style: none;
@@ -798,6 +798,33 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .blog-info .blog-post-text a.read-more, .blog-info .blog-post-text a.read-more:hover{color:#252525; display:block; font-weight:700;}
 
 
+
+/* Downloads and Knowledge base section */
+.knowlege-bank{padding:40px 0;}
+.icon-button-light{
+    text-decoration: none; 
+	text-align:center;
+    color: #FFF;
+	background:transparent;
+	font-size:24px;
+	font-weight:700;
+	width: 100%;
+    display: block;
+    border: 2px solid #FFF;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-transform: uppercase;
+	transition:all 0.4s;
+	margin:0 0 30px 0;
+	padding:15px;
+ }
+ 
+ .icon-button-light:hover, .icon-button-light:active,  .icon-button-light:focus { color: #252525; background:#ffc925; border:2px solid transparent;}
+ 
+ .icon-button-light i{font-size: 28px; margin: 0 20px 0 0; }
+
+
 /* contact us section */
 .contact-from-section{margin-top:60px; margin-bottom:30px;}
 .contact-from-section .info-entry{margin:0 0 30px 0;}
@@ -902,6 +929,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 /******************************* CSS styles for inner pages **********************************/
 
 .main-content-area-inner{padding:60px 0;}
+.main-content-area-inner-dark{padding:20px 0 0 0; background:#252525;}
 
 
 .page-header-inner{
@@ -1550,7 +1578,8 @@ blockquote {
 	#main-detail-area{margin:45px 0 0 0;}
 }
 
-.widget-nav-detail h4{color:#252525; margin: 0 0 10px 0; font-size: 18px;}
+.widget-nav-detail h4{color:#252525; margin: 0 0 10px 0; font-size: 18px; font-weight:700;}
+.widget-nav-detail h4::after{background: #ffc925;  content: "";  display: block; height: 2px;  margin: 15px 0; width: 70px;}
 .widget-nav-detail p{margin: 0 0 30px 0;}
 .widget-nav-detail img{margin:0 0 30px 0;}
 
@@ -1589,7 +1618,7 @@ blockquote {
 
 .toggle-panel{margin:0 0 30px 0}
 
-.toggle-panel h4{
+.toggle-panel h5{
 	margin: 0 0 10px 0; 
 	background: #f2f2f2;
 	font-size: 16px;
@@ -1602,7 +1631,7 @@ blockquote {
     transition: color ease .3s;
 }
 
-.toggle-panel h4:after {
+.toggle-panel h5:after {
     content: "\f067";
     font-family: "FontAwesome";
     font-size: 14px;
@@ -1617,12 +1646,12 @@ blockquote {
 }
 
 
-.toggle-panel h4.active{
+.toggle-panel h5.active{
 	background: #ffc925;
 }
 
 
-.toggle-panel h4.active:after{
+.toggle-panel h5.active:after{
 	content: "\f068";
 	color: #252525;
 }
@@ -1631,7 +1660,7 @@ blockquote {
 
 
 
-.toggle-panel h4 a{
+.toggle-panel h5 a{
 	display: block;
 	padding: 15px 0 15px 20px;
 	color: #252525;	
