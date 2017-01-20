@@ -300,6 +300,18 @@ var toggle_panel = function(){
 };
 								 
 
+var dropdownHover = function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+                $(this).toggleClass('open');     
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+                $(this).toggleClass('open');            
+            });
+};
+
 
 
 
@@ -312,6 +324,7 @@ $(function(){
 	heroSection();
     bgSlideshow();
 	scrollTexts();
+	dropdownHover();
 	fixTexts();
 	dockInnerNav();
 	testimonials();
@@ -324,52 +337,61 @@ $(function(){
 		
 	
 	
-	/* click and scroll to section nav menu*/
-	
-	$("#nav-menu ul li a[href^='#']").on('click', function(e) {
-
-       // prevent default anchor click behavior
-       e.preventDefault();
-	   
-	   // animate
-       $('html, body').animate({
-           scrollTop: $(this.hash).offset().top
-         }, 1000, function(){
-			   $("#nav-menu").removeClass("in");
-	    });
-		
-	});
-	
-	
-	
 /* highlight respective menu item when scroll to section */
 	
 if( $("#nav-menu").exists() )  {	
 	
-	 var navChildren = $("#nav-menu ul li").children();
-		var aArray = [];
-		for (var i = 0; i < navChildren.length; i++) {
-			var aChild = navChildren[i];
-			var ahref = $(aChild).attr('href');
-			aArray.push(ahref);
-		}
+					
+		// Cache selectors
+				var lastId,
+				 topMenu = $("#nav-menu"),
+				 topMenuHeight = topMenu.outerHeight()+1,
+				 // All list items
+				 menuItems = topMenu.find("a"),
+				 // Anchors corresponding to menu items
+				 scrollItems = menuItems.map(function(){
+				   var item = $($(this).attr("href"));
+					if (item.length) { return item; }
+				 });
+				
+				// Bind click handler to menu items
+				// so we can get a fancy scroll animation
+				menuItems.click(function(e){
+				  var href = $(this).attr("href"),
+					  offsetTop = href === "#" ? 0 : $(href).offset().top/*-topMenuHeight+1*/;
+				  $('html, body').stop().animate({ 
+					  scrollTop: offsetTop
+				  }, 1000, function(){
+			            $("#nav-menu").removeClass("in");
+	              });
+				  e.preventDefault();
+				});
+				
+				// Bind to scroll
+				$(window).scroll(function(){
+				   // Get container scroll position
+				   var fromTop = $(this).scrollTop()+topMenuHeight;
+				   
+				   // Get id of current scroll item
+				   var cur = scrollItems.map(function(){
+					 if ($(this).offset().top < fromTop)
+					   return this;
+				   });
+				   // Get the id of the current element
+				   cur = cur[cur.length-1];
+				   var id = cur && cur.length ? cur[0].id : "";
+				   
+				   if (lastId !== id) {
+					   lastId = id;
+					   // Set/remove active class
+					   menuItems
+						 .parent().removeClass("active")
+						 .end().filter("[href=#"+id+"]").parent().addClass("active");
+				   }                   
+				});
 		
+			
 	
-	$(window).scroll(function() {
-        var windowPos = $(window).scrollTop();
-        for (var i = 0; i < aArray.length; i++) {
-            var theID = aArray[i];
-            var secPosition = $(theID).offset().top;
-            secPosition = secPosition - 135;
-            var divHeight = $(theID).height();
-            divHeight = divHeight + 90;
-            if (windowPos >= secPosition && windowPos < (secPosition + divHeight)) {
-                $("a[href='" + theID + "']").parent().addClass("active");
-            } else {
-                $("a[href='" + theID + "']").parent().removeClass("active");
-            }
-        }
-    });
 	
 }
 		
@@ -397,11 +419,20 @@ if( $("#nav-menu").exists() )  {
 	
 	
 	
-	/* fancybox plugin*/
+	/* Ligthbox plugins*/
+	
 	if ( $().fancybox ) {
 	    $(".fancybox").fancybox({
 			padding : 0
 		});
+	}
+	
+	
+	if ( $().swipebox ) {
+	    $(".swipebox").swipebox({
+			   removeBarsOnMobile : false,
+			   hideBarsDelay : 0
+			});
 	}
 	
 	

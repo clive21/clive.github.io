@@ -39,7 +39,7 @@
   <header>
   
     <!-- Navbar -->
-    <nav id="nav-inner" class="navbar navbar-default">
+   <nav id="nav-inner" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-inner">
@@ -48,20 +48,47 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <h1 class="logo"><a class="navbar-brand" href="index.html"><img src="images/logo-acme-dark.png" class="logo-icon" alt="Acme Architecture"></a>Acme Architecture</h1>
+           <a class="navbar-brand" href="index.html"><img src="images/acme-logo.jpg" class="logo-icon" alt="Acme Architecture"></a>
         </div>
     
         <div class="collapse navbar-collapse" id="nav-menu-inner">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="#">STRUCTURES</a></li>
+            <li class="dropdown">
+                 <a href="services.html" class="dropdown-toggle disabled" data-toggle="dropdown">SERVICES<i class="fa fa-chevron-down"></i></a>
+                   <ul class="dropdown-menu">
+                        <li><a href="services-detail.html">ENGINEERING</a></li>
+                        <li><a href="services-detail.html">DESIGN</a></li>
+                        <li><a href="services-detail.html">PROJECT MANAGEMENT</a></li>
+                        <li><a href="services-detail.html">MANUFACTURING</a></li>
+                        <li><a href="services-detail.html">MAINTENENCE</a></li>
+                        <li><a href="services-detail.html">INSTALLATION</a></li>
+                  </ul>
+            </li>
+            <li class="dropdown">
+                <a href="structures.html" class="dropdown-toggle disabled" data-toggle="dropdown">STRUCTURES<i class="fa fa-chevron-down"></i></a>
+                  <ul class="dropdown-menu">
+                        <li><a href="structures.html">ARCHITECTURAL</a></li>
+                        <li><a href="structures.html">PROMOTIONAL</a></li>
+                        <li><a href="structures.html">INDUSTRIAL</a></li>
+                  </ul>
+            </li>
             <li class="active"><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="blog.html">BLOG</a></li>
-            <li><a href="#">KNOWLEDGE BANK</a></li>
+            <li class="dropdown">
+               <a href="knowledge-base.html" class="dropdown-toggle disabled" data-toggle="dropdown">KNOWLEDGE BANK<i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                        <li><a href="knowledge-base.html">PVC</a></li>
+                        <li><a href="knowledge-base.html">PVDF</a></li>
+                        <li><a href="knowledge-base.html">PTFE</a></li>
+                        <li><a href="knowledge-base.html">HDPE</a></li>
+                        <li><a href="knowledge-base.html">PVC Mesh</a></li>
+                        <li><a href="knowledge-base.html">Brochure (Download)</a></li>
+                  </ul>
+            </li>
             <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="javascript:void(0)" id="search-button" class="search-button">
+            <li><button href="javascript:void(0)" id="search-button" class="search-button">
                 <span class="visible-xs">SEARCH&nbsp;&nbsp;<i class="fa fa-search"></i></span>
-                <i class="fa fa-search hidden-xs"></i> </a>
+                <i class="fa fa-search hidden-xs"></i> </button>
             </li>
           </ul>
            
@@ -69,7 +96,7 @@
                  <i class="fa fa-search"></i>
                 <input type="text" placeholder="Type your search term and hit enter" name="search" class="search-field" autocomplete="off" value="" />
                 <input type="submit" value="Search" />
-                 <a href="javascript:void(0)" class="search-close"> <i class="fa fa-times"></i></a>
+                 <button type="reset" href="javascript:void(0)" class="search-close"> <i class="fa fa-times"></i></button>
            </form>
           
         </div><!-- /.navbar-collapse -->
@@ -86,7 +113,7 @@
      <div class="container">
          <div class="row">
              <div class="col-sm-6">
-                <h2>Our Portfolio</h2>
+                <h1>Our Portfolio</h1>
              </div>
              <div class="col-sm-6">
                 <div class="breadcrumb">
@@ -376,10 +403,7 @@ Nam semper ut arcu non placerat. Praesent nibh massa varius.</p>
   
   
   
-  
-  
-  
-  <!-- contact us section -->
+   <!-- contact us section -->
    <section id="contact" class="section-item">
    	<div class="container">
    		<div class="row">
@@ -391,22 +415,16 @@ Nam semper ut arcu non placerat. Praesent nibh massa varius.</p>
    		
    		<div class="row contact-from-section">
    			<div class="col-md-4">
-   				<div class="info-entry">
+   				
    					<h4>Address</h4>
-   					<p>123, Opposite street Mumbai<br> Near Real estate 400 001</p>
-   				</div>
-   				
-   				<div class="info-entry">
-   					<h4>Phone</h4>
-   					<p>+91 9999999999</p>
-   				</div>
-   				
-   				<div class="info-entry">
-   					<h4>E-mail</h4>
-   					<p>acme@architecture.com</p>
-   				</div>
-   				
-   			</div>
+   					
+                    <ul class="info-entry">
+                    	<li>123, Opposite street Mumbai<br> Near Real estate 400 001<br>Phone: +91 9999999999</li>
+                    	<li>B203, Oxford Chambers<br> Market street 410 011<br>Phone: +91 9898989898</li>
+                    	<li>1st floor, Vance Heights<br>Opposite Victoria Towers<br>Phone: +91 9008989000</li>
+                    </ul>
+          
+          	</div>
    			
    			<form method="get">
 				<div class="col-md-4">
