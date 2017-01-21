@@ -1896,3 +1896,46 @@ blockquote {
 }
 
 
+
+
+
+
+
+
+/* Table styling */
+
+table {
+  text-align: left;
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #d23232;
+  margin: 30px auto;
+  border-radius: 2px;
+}
+
+.table>thead>tr>th {border:none; font-size:18px;}
+
+thead tr:first-child {
+  background: #ed1c40;
+  color: #fff;
+  border: none;
+}
+
+th, td{ padding: 15px !important; }
+
+tbody tr:hover { background-color: rgba(237,28,64,.1); cursor: default; }
+tbody tr:last-child td { border: none; }
+tbody td { border-bottom: 1px solid #ddd; }
+
+
+table td i{margin: 0 15px; font-size: 20px !important;}
+table td a{display: block; width:100%;}
+
+
+
+
+
+
+
+
