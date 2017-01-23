@@ -609,10 +609,15 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   border:none;
   padding: 15px 20px;
   outline: none;	
+  font-weight: 700;	
 }
 
 
-
+@media screen and (max-width:600px) {
+	.search-button{
+	  padding: 5px 15px;
+	}
+}
 
 
 
@@ -663,11 +668,21 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 @media screen and (max-width:800px) {
 	#tab-section{margin: 20px 0 0 0;}
-	.service-list-tabs{border-right:none;}
+	.service-list-tabs{border-right:none; margin: 0 0 20px 0;}
 	.service-list-tabs li{display:inline-block;}
 	.services-tabs-desc{padding-left: 0;}
 	.service-list-tabs li:hover, .service-list-tabs li.active{border-right: none;}
 	.service-list-tabs li a{display: inline-block; padding: 0 20px 5px 0;}
+	.service-list-tabs li.active a{
+		background: #d23232;
+		color: #FFF;
+		display: inline-block;
+		padding: 5px 15px;
+		margin: 0 20px 10px 0;
+		border-radius: 2px;
+	}
+	
+	
 }
 
 
@@ -1753,9 +1768,9 @@ blockquote {
 	background: #f2f2f2;
 	font-size: 16px;
     position: relative;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-transition: color ease .3s;
     -moz-transition: color ease .3s;
     transition: color ease .3s;
@@ -1911,6 +1926,8 @@ table {
   border-spacing: 0;
   border: 2px solid #d23232;
   margin: 30px auto;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
 }
 
