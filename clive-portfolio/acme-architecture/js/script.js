@@ -16,6 +16,22 @@ $(window).load(function(e) {
 		 
 		 var $filterLinks = $('.item-sorter a'),
 			  $container = $('#sorting-container');
+			
+			
+			
+			if( $("#blog-listing").exists() )  {	
+			  $('#blog-listing').isotope({
+				  itemSelector: '.blog-item',
+				  animationEngine : "best-available",
+				  masonry: {
+					columnWidth: '.blog-item'
+				  }
+				});
+			}
+			
+			  
+			  
+			  
 		
 		   // initialize isotope on container
 		   $container.isotope({
@@ -184,6 +200,7 @@ var testimonials = function() {
     };
 	
 	
+	
 	var clients = function() {
         if ( $().owlCarousel ) {
             $('.clients').each(function(){
@@ -207,6 +224,27 @@ var testimonials = function() {
             });
         } 
     };
+	
+	
+var other_projects = function() {
+        if ( $().owlCarousel ) {
+                $('#other_projects').owlCarousel({
+					navigation : true,
+                    responsive: true,
+                    items: 1,
+                    navigationText: false,
+                    itemsDesktop: [3000,3],
+                    itemsDesktopSmall: [1400,3],
+                    itemsTablet:[970,3],
+                    itemsTabletSmall: [600,1],
+                    itemsMobile: [360,1],
+                    touchDrag: true,
+                    mouseDrag: true,
+                    autoPlay: true
+                });
+           } 
+    };
+
 	
 
 var counter = function() {
@@ -333,6 +371,7 @@ $(function(){
 	counter();
 	gmap();
 	toggle_panel();
+	other_projects();
 	
 		
 	

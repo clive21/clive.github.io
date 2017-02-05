@@ -628,8 +628,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 .section-item{padding: 100px 0 0 0;}
 .contact-section-inner{padding: 60px 0 0 0;}
-.section-item h2, .contact-section-inner h2{margin: 0 0 30px 0; color: #252525; font-weight: 700; font-size: 36px; line-height: 48px; text-align: center; text-transform:uppercase;}
-.section-item h2::after{
+.section-item h2, .contact-section-inner h2, .widget-nav-detail h2{margin: 0 0 30px 0; color: #252525; font-weight: 700; font-size: 36px; line-height: 48px; text-align: center; text-transform:uppercase;}
+.section-item h2::after, .widget-nav-detail h2::after{
     background: #d23232;
     content: "";
     display: block;
@@ -814,7 +814,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     border: 1px solid #f1f1f1;
     position: relative;
     text-align: center;
-    padding: 66px 40px 37px;
+    padding: 66px 40px 35px;
 }
 
 .testimonials .image {
@@ -907,12 +907,10 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 
 
-
-
 /* Blog and news section */
 .section-item.section-grey{background-color: #f2f2f2;}
 .blog-listing{margin-top:30px; padding:0 0 30px 0;}
-.blog-entry{margin: 0 0 30px 0;}
+.blog-entry{margin: 0 0 30px 0; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);}
 .blog-info{background:#FFFFFF; position: relative;}
 .blog-info .blog-date{position: absolute; width: 50px; height: 85px; background-color: #333; color:#FFF; text-align:center;}
 .blog-info .blog-date .day{font-size: 20px; margin: 10px 10px 0 10px; padding-bottom: 10px; border-bottom: 2px solid white;}
@@ -922,7 +920,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .blog-info .blog-post-text h4 a,  .blog-info .blog-post-text h4 a:hover{ color:#252525;}
 .blog-info .blog-post-text p{text-align: left;}
 .blog-info .blog-post-text a.author, .blog-info .blog-post-text a.category{color:#d23232;}
-.blog-info .blog-post-text a.read-more, .blog-info .blog-post-text a.read-more:hover{color:#252525; display:block; font-weight:700;}
+.blog-info .blog-post-text a.read-more, .blog-info .blog-post-text a.read-more:hover{display:block; font-weight:700;}
 
 
 
@@ -1813,7 +1811,7 @@ blockquote {
 	color: #FFF;	
 }
 
-.toggle-panel p{margin:0; padding:5px 15px 20px 20px; display: none;}
+.toggle-panel p{margin:0; padding:5px 15px 20px 20px; text-align:left; display: none;}
 
 
 
@@ -1951,8 +1949,62 @@ table td a{display: block; width:100%;}
 
 
 
+/* About Us page CSS */
+.feature-box{position:relative; overflow: hidden; margin: 40px 0 0 0;}
+.feature-box i{
+	color: #d23232;
+    border: 2px solid #d23232;
+    padding: 15px;
+    font-size: 32px;
+    display: inline-block;
+	width: 65px;
+    height: 65px;
+    text-align: center;
+	position: absolute;
+	top:0;
+	left:0;
+	transition: all 0.3s;
+}
+.feature-box:hover i{background:#d23232; color: #FFF;}
 
 
+.feature-box h4{margin: 0 0 10px 0; color: #252525; text-transform: uppercase; font-weight: 700; line-height: 1.6;}
+.feature-box .feature-box-description{padding: 0 30px 30px 100px;}
 
 
+/* Other Projects section */
 
+#other_projects{padding:40px 0;}
+.other-projects, .other-projects:hover{color: inherit; display:block; margin:0 0 40px 0;}
+.other-projects img{width:100%; height:auto; margin:0 0 40px 0; transition:all 0.3s ease-in-out;}
+.other-projects img:hover{opacity: 0.5;}
+.other-projects  p {text-align:left; font-size:13px;}
+.other-projects h4{color:#252525; margin: 0 0 10px 0; font-size: 18px; font-weight:700;}
+.other-projects h4::after{background: #d23232;  content: "";  display: block; height: 2px;  margin: 15px 0; width: 70px;}
+	
+
+#other_projects .owl-buttons div {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 10px;
+	height: 24px;
+	line-height: 24px;
+	background: url(../images/icons/prev.png) no-repeat center center;
+	background-size: 10px 24px;
+	border-radius: 0;
+	position: absolute;
+	left: -70px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#other_projects  .owl-buttons div.owl-next {
+	left: auto;
+	right: -70px;
+	background: url(../images/icons/next.png) no-repeat center center;
+}
+
+@media screen and (max-width:1280px) {
+	#other_projects .owl-buttons{display: none !important;}
+}

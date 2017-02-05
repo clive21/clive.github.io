@@ -4,12 +4,12 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
+    <title>Structure Detail</title>
     <!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-     <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/swipebox.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
@@ -39,7 +39,7 @@
   <header>
   
     <!-- Navbar -->
-   <nav id="nav-inner" class="navbar navbar-default">
+    <nav id="nav-inner" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-inner">
@@ -64,7 +64,7 @@
                         <li><a href="services-detail.html">INSTALLATION</a></li>
                   </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown active">
                 <a href="structures.html" class="dropdown-toggle disabled" data-toggle="dropdown">STRUCTURES<i class="fa fa-chevron-down"></i></a>
                   <ul class="dropdown-menu">
                         <li><a href="structures.html">ARCHITECTURAL</a></li>
@@ -72,7 +72,7 @@
                         <li><a href="structures.html">INDUSTRIAL</a></li>
                   </ul>
             </li>
-            <li class="active"><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="blog.html">BLOG</a></li>
             <li class="dropdown">
                <a href="knowledge-base.html" class="dropdown-toggle disabled" data-toggle="dropdown">KNOWLEDGE BANK<i class="fa fa-chevron-down"></i></a>
@@ -114,14 +114,17 @@
      <div class="container">
          <div class="row">
              <div class="col-sm-6">
-                <h1>Our Portfolio</h1>
+                <h1>ATRIUM</h1>
              </div>
              <div class="col-sm-6">
                 <div class="breadcrumb">
                     <a href="index.html" class="trail-begin">Home</a>
                     <span class="seperator">/</span>
-                    <span class="trail-end">Portfolio</span>
+                    <a href="structures.html" class="trail-begin">Structures</a>
+                    <span class="seperator">/</span>
+                    <span class="trail-end">Atrium</span>
                 </div>
+                
              </div>
              
          </div>
@@ -129,200 +132,204 @@
   </section>
   
   
-     <!-- Portfolio section -->
-  <section id="portfolio" class="main-content-area-inner-dark">
-      <div class="container">
-           <div class="row">
-              <div class="col-xs-12">
-                 <ul class="item-sorter">
-                       <li><a href="javascript:void(0)" class="active" data-filter="*">All</a></li>
-                       <li><a href="javascript:void(0)" data-filter=".architecture">Architecture</a></li>
-                       <li><a href="javascript:void(0)" data-filter=".building">Building</a></li>
-                       <li><a href="javascript:void(0)" data-filter=".interiors">Interiors</a></li>
-                       <li><a href="javascript:void(0)" data-filter=".workspace">Workspace</a></li>
-                </ul>
-               </div>
-           </div>
-       </div>
-       
-       
-           <div id="sorting-container">
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item architecture">
-                 <a href="portfolio-detail.html">
-                    <img src="images/portfolio/1.jpg" class="img-responsive" alt="1">
-                    <div class="item-detail">
-                       <h4>Project 1</h4>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
-                    </div>
-                 </a>
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item architecture">
-                  <a href="portfolio-detail.html">
-                    <img src="images/portfolio/2.jpg" class="img-responsive" alt="2">
-                    <div class="item-detail">
-                       <h4>Project 2</h4>
-                       <p>Project 2 description and some words about it</p>
-                    </div>
-                   </a> 
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item interiors">
-                  <a href="portfolio-detail.html">
-                    <img src="images/portfolio/3.jpg" class="img-responsive" alt="3">
-                    <div class="item-detail">
-                       <h4>Project 3</h4>
-                       <p>Project 3 description and some words about it</p>
-                    </div>
-                   </a> 
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item workspace">
-                 <a href="portfolio-detail.html">
-                    <img src="images/portfolio/4.jpg" class="img-responsive" alt="4">
-                    <div class="item-detail">
-                       <h4>Project 4</h4>
-                       <p>Project 4 description and some words about it</p>
-                    </div>
-                  </a>  
-               </div>
-               
-               
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item interiors">
-                 <a href="portfolio-detail.html">
-                    <img src="images/portfolio/5.jpg" class="img-responsive" alt="5">
-                    <div class="item-detail">
-                       <h4>Project 5</h4>
-                       <p>Project 5 description and some words about it</p>
-                    </div>
-                 </a>   
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item building">
-                <a href="portfolio-detail.html">
-                    <img src="images/portfolio/6.jpg" class="img-responsive" alt="6">
-                    <div class="item-detail">
-                       <h4>Project 6</h4>
-                       <p>Project 6 description and some words about it</p>
-                    </div>
-                </a>    
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item workspace">
-                 <a href="portfolio-detail.html">
-                    <img src="images/portfolio/7.jpg" class="img-responsive" alt="7">
-                    <div class="item-detail">
-                       <h4>Project 7</h4>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, nam, magnam, reiciendis suscipit quae consectetur alias quia corrupti ad quasi repudiandae maiores earum? Sapiente, ipsam magni quod eveniet nemo accusamus.</p>
-                    </div>
-                  </a>  
-               </div>
-               
-               <div class="col-md-3 col-sm-6 col-xs-12 filter-item architecture">
-               <a href="portfolio-detail.html">
-                    <img src="images/portfolio/8.jpg" class="img-responsive" alt="8">
-                    <div class="item-detail">
-                       <h4>Project 8</h4>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, at, excepturi, placeat, illum sequi minima magni deserunt consectetur voluptatum aut ea culpa labore voluptas dolorum aspernatur obcaecati nisi veritatis voluptatem!</p>
-                    </div>
-                 </a>   
-               </div>
-           
-           </div>
-       
-  </section>
+ 
   
-  
-  <!-- Our Team -->
-  <section class="section-item section-grey">
+  <!-- Portfolio detail description -->
+ 
+  <section class="main-content-area-inner">
   	<div class="container">
   		<div class="row">
-  			<h2>Our Team</h2>
-  			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet iaculis elit.<br>
-Nam semper ut arcu non placerat. Praesent nibh massa varius.</p>
-  			
-  		</div>
   		
-  		<div class="row">
-  			<div class="col-md-3 col-sm-6">
-  				<div class="team-members">
-                            <div class="thumb">
-                                <div class="image">
-                                    <img src="images/team/1.jpg" alt="image">
-                                </div>
-                                <div class="socials">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="name">Robert Snowflake</h4>
-                            <div class="position">Main Architect</div>
+            <div class="col-md-6">
+  					  
+                      <div class="widget-nav-detail">
+                      
+                            <a href="images/structures/architectural/large/atrium.jpg" class="swipebox" rel="structural-images" title="Atrium">
+                                <img src="images/structures/architectural/large/atrium.jpg" class="img-responsive" alt="Atrium">
+                           </a>
+                           
+                        <div class="row">
+                        
+                              <div class="col-xs-4 ">
+                             <a href="images/structures/architectural/large/atrium1.jpg" class="swipebox" rel="structural-images" title="Atrium">
+                                <img src="images/structures/architectural/large/atrium1.jpg" class="img-responsive" alt="Atrium">
+                             </a>
+                             </div>
+                             
+                              <div class="col-xs-4 ">
+                              <a href="images/structures/architectural/large/atrium2.jpg" class="swipebox" rel="structural-images" title="Atrium">
+                                <img src="images/structures/architectural/large/atrium2.jpg" class="img-responsive" alt="Atrium">
+                                </a>
+                             </div>
+                             
+                              <div class="col-xs-4 ">
+                              <a href="images/structures/architectural/large/atrium3.jpg" class="swipebox" rel="structural-images" title="Atrium">
+                                <img src="images/structures/architectural/large/atrium3.jpg" class="img-responsive" alt="Atrium">
+                                </a>
+                             </div>
+                        
                         </div>
-  			</div>
-  			<div class="col-md-3 col-sm-6">
-  				<div class="team-members">
-                            <div class="thumb">
-                                <div class="image">
-                                    <img src="images/team/2.jpg" alt="image">
-                                </div>
-                                <div class="socials">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="name">Sarah Smith</h4>
-                            <div class="position">Junior Architect</div>
-                        </div>
-  			</div>
-  			<div class="col-md-3 col-sm-6">
-  				<div class="team-members">
-                            <div class="thumb">
-                                <div class="image">
-                                    <img src="images/team/3.jpg" alt="image">
-                                </div>
-                                <div class="socials">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="name">Daniel Orange</h4>
-                            <div class="position">Senior Builder</div>
-                        </div>
-  			</div>
-  			<div class="col-md-3 col-sm-6">
-  				<div class="team-members">
-                            <div class="thumb">
-                                <div class="image">
-                                    <img src="images/team/4.jpg" alt="image">
-                                </div>
-                                <div class="socials">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h4 class="name">Mike Richardson</h4>
-                            <div class="position">Junior Builder</div>
-                        </div>
-  			</div>
-  			
+  					
+ 					  </div>
+                      
+                      
+                      
+                      
+					</div>  
+                    
+            <div class="col-md-6">
+  					  
+  					   <div class="widget-nav-detail">
+							<h4>Atrium</h4>
+							
+                            <p>The Atrium located in Mumbai is one of the largest with over 450,000 square feet of new construction. Complete interior renovation included removing walls, new restrooms, paint, wall coverings, tile and carpeting.</p>
+                            
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit convallis facilisis. Fusce lectus ex, pretium efficitur suscipit sed, faucibus vel elit. Sed eu vestibulum leo. Phasellus at quam id elit hendrerit semper feugiat id nunc. Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.</p>
+                            
+							<h4>About</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit convallis facilisis. Fusce lectus ex, pretium efficitur suscipit sed, faucibus vel elit. Sed eu vestibulum leo. Phasellus at quam id elit hendrerit semper feugiat id nunc. Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit convallis facilisis. Fusce lectus ex, pretium efficitur suscipit sed, faucibus vel elit. Sed eu vestibulum leo. Phasellus at quam id elit hendrerit semper feugiat id nunc. Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.</p>
+ 					   
+  					   </div>
+  					  	
+  					</div>
+  	
   		</div>
-  		
   		
   	</div>
   	
+  	
   </section>
+  
+  
+
+  
+  
+  
+ 
+  <!-- Our other projects  -->
+    
+  <section class="section-item section-grey">
+  <div class="container">
+     <div class="row">
+        <div class="col-xs-12">
+          <div class="widget-nav-detail">
+              <h2>Other Structures</h2>
+          </div>
+         </div>
+     </div>
+     
+     <div class="row">
+        
+           <div id="other_projects">
+              <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/carparking.jpg" alt="1">
+                         <h4>Car Parking</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              <div class="col-md-12">
+                     <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/facade.jpg" alt="1">
+                         <h4>Facade</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              <div class="col-md-12">
+                     <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/functionhall.jpg" alt="1">
+                         <h4>Function Hall</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              
+               <div class="col-md-12">
+                     <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/gazebo.jpg" alt="1">
+                         <h4>Gazebo</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+               <div class="col-md-12">
+                     <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/interior.jpg" alt="1">
+                         <h4>Interior</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+               <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/mall.jpg" alt="1">
+                         <h4>Mall</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              
+               <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/restaurant.jpg" alt="1">
+                         <h4>Restaurant</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              
+              
+               <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/rooftop.jpg" alt="1">
+                         <h4>Rooftop</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+              </div>
+              
+              
+               <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/royaltents.jpg" alt="1">
+                         <h4>Royal Tents</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+                </div>
+              
+              
+               <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/shade.jpg" alt="1">
+                         <h4>Shade Solution</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+                </div>
+                
+                <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/stadium.jpg" alt="1">
+                         <h4>Stadiums</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+                </div>
+                
+                 <div class="col-md-12">
+                      <a class="other-projects" href="structure-detail.html">
+                        <img src="images/structures/architectural/swimming.jpg" alt="1">
+                         <h4>Swimming Pools</h4>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repellat, necessitatibus ea impedit iusto dignissimos id mollitia iste omnis sapiente facilis blanditiis suscipit quas aliquid sit aut.</p>
+                      </a>
+                </div>
+              
+              
+            </div>  
+          
+    </div>
+     
+   </div>
+  
+
+   
+    
+    
+  </section>
+  
   
   
   <!-- Our Achievements -->
@@ -404,7 +411,8 @@ Nam semper ut arcu non placerat. Praesent nibh massa varius.</p>
   
   
   
-   <!-- contact us section -->
+  
+    <!-- contact us section -->
    <section id="contact" class="section-item">
    	<div class="container">
    		<div class="row">
@@ -543,15 +551,16 @@ Nam semper ut arcu non placerat. Praesent nibh massa varius.</p>
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.min.js"></script>
     
-    
-    <!-- filter --> 
-	<script src="js/isotope.pkgd.min.js"></script>
+      
+     <!-- Swipebox lightbox plugin  -->
+    <script src="js/jquery.swipebox.min.js"></script>
 	
     <!--counter js-->
 	<script src="js/countTo.js"></script>
     
     <!-- jquery appear -->
     <script src="js/jquery.appear.js"></script>
+    
     
     <!--Owl carousel js-->
 	<script src="js/owlCarousel.js"></script>
