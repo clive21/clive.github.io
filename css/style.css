@@ -176,16 +176,16 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 .profile-pic {
     background: url(../images/profile-bg.jpg) repeat;
-    padding: 40px 0;
+    padding: 80px 0;
 }
 
 .avatar {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    border: 3px solid #FFF;
+    width:120px;
+	height:120px;
+	display:block;
+	margin:0 auto;
+	border-radius:50%;
+	border:3px solid #FFF;
 }
 
 
@@ -319,10 +319,6 @@ h4::after{background: #ffd42d;  content: "";  display: block; height: 6px;  marg
 	padding: 0px;
 }
 
-.personal-info .p-info{
-    background: #f6f6f6;
-}
-
 .personal-info li {
 	float: left;
 	list-style: none;
@@ -334,9 +330,8 @@ h4::after{background: #ffd42d;  content: "";  display: block; height: 6px;  marg
 }
 
 .personal-info li strong {
-	padding: 15px;
-	line-height: 42px;
-	background: #FFF;
+	padding: 0 15px;
+	line-height: 43px;
 	font-size: 16px;
 	color: #9b9b9b;
 	font-weight: 400;
@@ -722,7 +717,7 @@ footer p {
 
 
 
-/* For behance */
+/* Tootltip for behance */
 
 #imagescontainer, #projectcontainer {
 	margin: 20px 0;
@@ -733,57 +728,28 @@ footer p {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
+	margin-left: -20px;
 }
 #imageslist li {
+	padding: 0px;
+	float: left;
 	list-style-type: none;
-	margin:0 0 30px 0;
+	margin-top: 0px;
+	margin-right: 00px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+        position: relative;
+		box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
 }
-
-#imageslist li:hover a{
-	border: 3px solid #2c383c;
-    border-bottom: none;
-}
-
 #imageslist li a {
 	display: block;
-    border: 3px solid #ffd42d;
-    border-bottom: none;
-	transition:all .3s ease-in-out;
 }
-
-#imageslist li a img{
-	width: 100%;
-	height:auto;
-	transition:all .3s ease-in-out;
-}
-
-
-#imageslist li a img:hover{
-	opacity:0.5;
-}
-
 #imageslist li .cover-title {
 	display: none;
 }
-#imageslist li .project-title {
-	display: block;
-    line-height: 1.6;
-    padding: 10px 15px;
-    background: #ffd42d;
-    color: #2c383c;
-	font-size: 13px;
-	white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  transition:all .3s ease-in-out;
+#imageslist li .cover-tag {
+	display: none;
 }
-
-#imageslist li:hover .project-title{
-	 background: #2c383c;
-    color: #ffd42d;
-}
-
-
 #projectImages li {
 	list-style-type: none;
 	padding-top: 20px;
@@ -801,8 +767,6 @@ footer p {
   width: 194px;
   background-color: #212222;
 }
-
-
 .tooltip.top .tooltip-arrow {
   border-top-color: #212222;
   border-width: 9px 9px 0;
@@ -821,6 +785,110 @@ footer p {
 	 font-size: 14px;
 	 line-height: 1.4em;
 }
+
+/*** responsive extras ***/
+
+@media (min-width: 1200px) {
+#imageslist img {
+	width: 218px;
+	height: 171px;
+}
+ul#projectImages {
+	width: 600px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#descriptioncontainer {
+	padding-top: 10px;
+}
+#behance-detail h1, #behance-detail .h1 {
+  font-size: 32px;
+}
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+.tooltip-inner {
+  width: 196px;
+  max-width: 196px;
+}
+#imageslist img {
+		width: 220px;
+		height: 172px;
+}
+#behance-detail h1, #behance-detail .h1 {
+  font-size: 32px;
+}
+ul#projectImages {
+	width: 600px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#descriptioncontainer {
+	float: right;
+	width: 300px;
+	padding-top: 10px;
+}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+.tooltip-inner {
+  width: 204px;
+  max-width: 204px;
+}
+#imageslist img {
+		width: 228px;
+		height: 178px;
+}
+#behance-detail h1, #behance-detail .h1 {
+  font-size: 25px;
+}
+ul#projectImages {
+	width: 600px;
+	margin: 0px;
+	padding: 0px;
+}
+#descriptioncontainer {
+	float: none;
+}
+}
+@media (max-width: 767px) {
+.tooltip-inner {
+  width: 162px;
+}
+#imageslist img {
+		width: 186px;
+		height: 145px;
+}
+#behance-detail h1, #behance-detail .h1 {
+  font-size: 20px;
+}
+ul#projectImages {
+	margin: 0px;
+	padding: 0px;
+}
+}
+@media (max-width: 480px) {
+.tooltip-inner {
+  width: 186px;
+}
+#imageslist img {
+	width: 210px;
+	height: 164px;
+}
+ul#projectImages {
+	margin: 0px;
+	padding: 0px;
+}
+}
+@media (max-width: 320px) {
+#imageslist img {
+	width: 320px;
+	height: 250px;
+}
+}
+
+
+
 
 
 
