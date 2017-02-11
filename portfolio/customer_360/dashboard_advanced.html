@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/favicon.ico">
+<title>Jio Dashboard - All in One View</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div id="loading"><span class="loading_img"></span></div>
+
+
+
+<div class="body-wrapper">
+
+   <!--Header -->
+  <header class="gradient_bg clearfix">
+         
+         <a href="#" class="logo"><img src="images/jio_logo.png" alt="logo" /></a>
+      
+         <ul class="access_menu clearfix">
+            <li>
+                   <a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+                      <img src="images/persona.png" class="user_pic" alt="User">
+                       <span class="user_text">Welcome<br><span class="username">Juhi Deshmukh</span></span>
+                       <i class="fa fa-angle-down"></i>
+                   </a>
+                   <div class="dropdown-menu dropdown-position">
+                      <a href="#">Profile</a>
+                      <a href="#">Notifications</a>
+                   </div>
+            </li>
+            <li>
+                <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><span class="filter"></span></a>
+                <div class="dropdown-menu dropdown-position">
+                     <h5>Filters</h5>
+                     <div class="styled-select">
+                      <select>
+                          <option>Select Region</option>
+                          <option>North</option>
+                          <option>South</option>
+                          <option>East</option>
+                          <option>West</option>
+                      </select>
+                      <span class="dropdown_arrow"></span>
+                     </div> 
+                     <div class="styled-select">
+                       <select>
+                          <option>Select State</option>
+                          <option>Maharashtra</option>
+                          <option>Goa</option>
+                          <option>Uttar Pradesh</option>
+                          <option>Kerala</option>
+                      </select>
+                      <span class="dropdown_arrow"></span>
+                     </div>
+                     <div class="styled-select"> 
+                       <select>
+                          <option>Select City</option>
+                          <option>Mumbai</option>
+                          <option>Pune</option>
+                          <option>Kolkatta</option>
+                          <option>Delhi</option>
+                      </select>
+                      <span class="dropdown_arrow"></span>
+                      </div>
+                      <div class="styled-select">
+                       <select>
+                          <option>Select JC</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                      </select>
+                      <span class="dropdown_arrow"></span>
+                      </div>
+                      <button class="button">Submit</button>
+                   </div>
+           </li>
+            <li>
+              <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><span class="calendar_icon"></span></a>
+              <div class="dropdown-menu dropdown-position"><a href="#">Calendar Menu</a></div>
+           </li>
+            <li>
+               <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><span class="alerts"></span></a>
+               <div class="dropdown-menu dropdown-position"><a href="#">Alerts Menu</a></div>
+            </li>
+            <li>
+                <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><span class="exit"></span></a>
+                <div class="dropdown-menu dropdown-position"><a href="#">Logout</a></div>
+           </li>
+         </ul>
+      
+    </header>
+    
+    <!-- Navigation menu -->
+    <nav>
+      <a class="mobile-menu" href="javascript:void(0);"><i class="fa fa-bars"></i> &nbsp; &nbsp; Menu </a>
+      <ul>
+        <li class="selected"><a href="#">Summary</a></li>
+        <li><a href="#">Aquisitions</a></li>
+        <li><a href="#">Onboarding &amp; Satisfaction</a></li>
+        <li><a href="#">Product Usage</a></li>
+        <li><a href="#">Care</a></li>
+        <li><a href="#">CVLM</a></li>
+        <li><a href="#">Channel</a></li>
+        <li><a href="#">Business Finance</a></li>
+        <li><a href="#">Network</a></li>
+        <li><a href="#">Competition</a></li>
+        <li><a href="#">Target</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Content container -->
+    <div class="tab_container">
+    <div class="blocks blocks-100 blocks-xlg-4 blocks-md-4 blocks-sm-2" id="parent_content_holder">
+    
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor1">
+         <td colspan="2" class="header">Acquisitions</td>
+        </tr>
+        
+        <tr>
+         <td class="padding_a" valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">Connections GA</div>
+         </td>
+        </tr>
+        
+        <!-- Data row 1-->
+        <tr>
+         <td class="padding_a padTopNone" valign="top">
+              <div class="fieldValue">1009</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+         
+         <td valign="top" align="middle" class="padding_a padTopNone">
+              <div id="sparkline_chart1"></div>
+              <!--<div id="pie"></div>-->
+          </td>
+        </tr>
+        
+        <!-- Data Row 2-->
+        <tr>
+         <td class="bdrBtm_grey bdrRight_grey padding_a w50pcnt">
+          <div class="fieldDescription">Current rate</div>
+          <div class="smallTitle">1.92</div>
+         </td>
+          <td class="bdrBtm_grey padding_a">
+          <div class="fieldDescription">Required rate</div>
+          <div class="smallTitle">20.27</div>
+         </td>
+        </tr>
+        
+        <!-- Data row 3-->
+        <tr>
+         <td class="padding_a"valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">Total Connections</div>
+         </td>
+        </tr>
+        <tr>
+         <td class="bdrBtm_grey padding_a padTopNone" valign="top">
+              <div class="fieldValue">567</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+         <td valign="middle" align="right" class="padding_a bdrBtm_grey padTopNone">
+         <img src="images/customer_care_person.png" alt="person"/></td>
+        </tr>
+        
+        <!-- Data row 4-->
+        <tr>
+         <td  class="padding_a" valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">% GA with Avg Consumption</div>
+         </td>
+        </tr>
+        
+        <!-- Data row 5-->
+        <tr>
+         <td class="bdrRight_grey padding_a padTopNone">
+              <div class="fieldDescription">Data</div>
+              <div class="fieldValue">9%</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              
+         </td>
+          <td class="padding_a padTopNone">
+              <div class="fieldDescription">Voice</div>
+              <div class="fieldValue">23%</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+        </tr>
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+            <table border="0" cellpadding="0" cellspacing="0">
+            <!-- Header row -->
+            <tr class="headerColor2">
+             <td colspan="2" class="header">Onboarding &amp; Satisfaction</td>
+            </tr>
+            
+            <!-- Data row 1-->
+            <tr>
+             <td class="padding_a bdrBtm_grey bdrRight_grey w50pcnt">
+                  <div class="fieldValue">5%</div>
+                  <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">CES Onboarding</div>
+             </td>
+              <td class="padding_a bdrBtm_grey">
+                  <div class="fieldValue">8%</div>
+                  <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">NPS</div>
+             </td>
+            </tr>
+            
+            <!-- Data Row 2-->
+            <tr>
+             <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+                <table align="left" class="w60pcnt">
+                  <tr>
+                      <td>
+                          <div class="fieldValue">23%</div>
+                          <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                          <div  class="clearBoth"></div>
+                          <div class="fieldDescription">Acquisitions beyond TAT</div>
+                      </td>
+                   </tr>
+                </table>
+                <table align="right">
+                   <tr valign="middle" align="center">
+                     <td valign="middle" align="center" style="text-align:center"><img src="images/mobile_phone_icon.png" alt="cell phone icon" style="margin:10px 5px 0 0;"/></td>
+                   </tr>
+                </table>
+              </td>
+            </tr>
+            
+            <!-- Data row 3-->
+            <tr>
+             <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+                <table align="left" style="width:60%;">
+                  <tr>
+                      <td>
+                          <div class="fieldValue">34%</div>
+                          <img src="images/up_arrow_yellow.png" class="arrowDir"  alt="up arrow"/>
+                          <div  class="clearBoth"></div>
+                          <div class="fieldDescription">CAF Rejection</div>
+                      </td>
+                    </tr>
+                </table>
+                <table align="right">
+                   <tr align="center" valign="middle">
+                     <td valign="middle" align="center" style="text-align:center"><img src="images/miss_call_icon.png" alt="miss call icon" style="margin:10px 0 0 0;"/></td>
+                   </tr>
+                </table>
+             </td>
+            </tr>
+            
+            <!-- Data row 4-->
+            <tr>
+             <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+                <table align="left" class="w60pcnt">
+                  <tr>
+                      <td>
+                          <div class="fieldValue">15%</div>
+                          <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+                          <div  class="clearBoth"></div>
+                          <div class="fieldDescription">TV Failures</div>
+                      </td>
+                  </tr>
+                  
+                  
+                  
+                </table>
+                <table align="right">
+                   <tr valign="middle" align="center">
+                     <td valign="middle" align="center" style="text-align:center"><img src="images/television_icon.png" alt="TV icon" style="margin:10px 0 0 0;"/></td>
+                   </tr>
+                </table>
+              </td>
+            </tr>
+            
+            <!-- Data row 5-->
+            <tr>
+             <td class="padding_a" valign="middle" colspan="2">
+                <table align="left" class="w60pcnt">
+                  <tr>
+                      <td>
+                          <div class="fieldValue">18%</div>
+                          <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                          <div  class="clearBoth"></div>
+                          <div class="fieldDescription">Social sentiment index</div>
+                      </td>
+                   </tr>
+                 </table>
+                <table align="right">
+                   <tr valign="middle" align="center">
+                     <td valign="middle" align="center" style="text-align:center"><img src="images/chat_bubble_icon.png" alt="chat icon" style="margin:10px 0 0 0;"/></td>
+                   </tr>
+                </table>
+             </td>
+            </tr>
+            
+            </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor3">
+         <td class="header">Product Usage</td>
+         <td align="right" class="padding_a">(MOM)</td>
+        </tr>
+        
+        <!-- Data row 1 and 2-->
+        <tr>
+         <td class="padding_a" valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">usage per connection</div>
+         </td>
+        </tr>
+        <tr>
+         <td class="padding_a padTopNone w50pcnt bdrBtm_grey bdrRight_grey" valign="top">
+              <div class="fieldDescription">Data</div>
+              <div class="fieldValue">9</div>
+              <div class="unit">GB</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+          </td>
+         <td class="padding_a padTopNone bdrBtm_grey" valign="top">
+               <div class="fieldDescription">Data</div>
+              <div class="fieldValue">100</div>
+              <div class="unit">MOU</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+        </tr>
+        
+        <!-- Data Row 3 and 4 -->
+        <tr>
+         <td class="padding_a" valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">Active connections</div>
+          </td>
+        </tr>
+        <tr>
+         <td valign="top" class="padding_a padTopNone w50pcnt bdrBtm_grey bdrRight_grey">
+              <div class="fieldDescription">Data</div>
+              <div class="fieldValue">722</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              
+         </td>
+          <td valign="top" class="padding_a padTopNone bdrBtm_grey">
+              <div class="fieldDescription">Voice</div>
+              <div class="fieldValue">557</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+        </tr>
+        
+        <!-- Data row 5 and 6-->
+        <tr>
+         <td class="padding_a" valign="middle" colspan="2">
+         <div class="fieldDescription text-uppercase">Realized rate</div>
+          </td>
+        </tr>
+        <tr>
+         <td valign="top" class="padding_a padTopNone w50pcnt bdrRight_grey">
+              <div class="fieldDescription">Data</div>
+              <div class="fieldValue">5.5 <i class="fa fa-inr"></i></div>
+              <div class="unit"><!--<img src="images/rupee.png" width="10" height="12" alt="rupee">--> per MB</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              
+         </td>
+          <td valign="top" class="padding_a padTopNone">
+              <div class="fieldDescription">Voice</div>
+              <div class="fieldValue">2 <i class="fa fa-inr"></i></div>
+              <div class="unit"><!--<img src="images/rupee.png" width="10" height="12" alt="rupee">--> per Min</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+         </td>
+        </tr>
+        
+        
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor4">
+         <td class="header"colspan="2">Care</td>
+        </tr>
+        
+        
+        <!-- Data Row 1-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+            <div class="fieldValue">2</div>
+              <div class="unit">Query</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Per 1000 customers</div>
+           
+            
+            
+         
+         </td>
+        </tr>
+        
+        <!-- Data row 2-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+          <div class="fieldValue">25</div>
+              <div class="unit">Complaints</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir"  alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">CAF Rejection</div>
+         </td>
+        </tr>
+        
+        <!-- Data row 3-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+              <div class="fieldValue">6.05</div>
+              <div class="unit">Min</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Avg Call Handling Time</div>
+          </td>
+        </tr>
+        
+        <!-- Data row 4-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle" colspan="2">
+            <div class="fieldValue">18</div>
+              <div class="unit">Hrs</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Avg Resolution Time</div>
+         </td>
+        </tr>
+        
+        <!-- Data row 5-->
+        <tr class="bgDarkGrey">
+         <td class="padding_a w70pcnt">
+              <div class="fieldDescription">
+               <strong>Trending complaint Areas</strong>
+              <ol>
+               <li>Network Coverage</li>
+               <li>Billing</li>
+              </ol>
+             </div>
+         </td>
+          <td class="padding_a">
+             <a href="#"><img src="images/edit_data_icon.png" alt="Edit" style="margin:10px 0 0 0; border:0;" /></a>
+         </td>
+        </tr>
+        
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor5">
+         <td colspan="2" class="header">CLVM</td>
+        </tr>
+        
+        <!-- Data row 1-->
+        
+        
+        <!-- Data Row 2-->
+        <tr>
+             <td class="padding_a bdrBtm_grey" valign="middle">
+                  <div class="fieldValue">712</div>
+                  <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">INR</div>
+             </td>
+             <td valign="middle" style="border-bottom:1px solid #d8d8d8;">
+          <div class="fieldDescription">Avg Rev Per Active<br/>Connection (ARPAC)</div>
+         </td>
+          </tr>
+        
+        <!-- Data row 3-->
+        <tr>
+            <td class="padding_a bdrBtm_grey" valign="middle">
+                  <div class="fieldValue">575</div>
+                  <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">INR</div>
+             </td>
+             <td valign="middle" style="border-bottom:1px solid #d8d8d8;">
+          <div class="fieldDescription">Avg Data Rev Per Active<br/>
+            Data Connection</div>
+         </td>
+          </tr>
+        
+        <!-- Data row 4-->
+        <tr>
+             <td class="padding_a bdrBtm_grey" valign="middle">
+                  <div class="fieldValue">71.2</div>
+                  <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">INR</div>
+             </td>
+             <td valign="middle" style="border-bottom:1px solid #d8d8d8;">
+          <div class="fieldDescription">Delta ARPC due to<br/>
+            Campaign</div>
+         </td>
+          </tr>
+        
+        <!-- Data row 5-->
+        <tr>
+             <td class="padding_a" valign="middle">
+                  <div class="fieldValue">5%</div>
+                  <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+                  <div  class="clearBoth"></div>
+                  <div class="fieldDescription">Hrs</div>
+             </td>
+             <td valign="middle">
+          <div class="fieldDescription">% Reduction in # of<br/>
+            Disconnections</div>
+         </td>
+          </tr>
+        
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor6">
+         <td colspan="2">
+          <div class="header">Channel</div>
+          </td>
+          <td class="padding_a" align="right">
+           (Offline)
+          </td>
+        </tr>
+        
+        <!-- Data row 1 and 2-->
+        <tr>
+         <td class="padding_a" valign="middle" colspan="3">
+         <div class="fieldDescription text-uppercase">no of outlets sell in</div>
+         </td>
+        </tr>
+        <tr>
+         <td valign="top" class="padding_a padTopNone bdrBtm_grey bdrRight_grey w33pcnt">
+              <div class="fieldValue">120</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Device</div>
+              
+              
+         </td>
+          <td valign="top" class="padding_a padTopNone bdrBtm_grey bdrRight_grey w33pcnt">
+              <div class="fieldValue">200</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">SIM</div>
+              
+              
+         </td>
+        <td valign="top" class="padding_a padTopNone bdrBtm_grey w33pcnt">
+              <div class="fieldValue">250</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Recharge
+              
+              
+         </div></td>
+        </tr>
+        
+        <!-- Data Row 3 and 4 -->
+        <tr>
+          <td class="padding_a" valign="middle" colspan="3">
+         <div class="fieldDescription text-uppercase">no of outlets sell out</div>
+          </td>
+        </tr>
+        <tr>
+         <td valign="top" class="padding_a padTopNone bdrBtm_grey bdrRight_grey w33pcnt">
+              <div class="fieldValue">100</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Device</div>
+              
+              
+         </td>
+          <td valign="top" class="padding_a padTopNone bdrBtm_grey bdrRight_grey w33pcnt">
+              <div class="fieldValue">150</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">SIM</div>
+              
+              
+         </td>
+         <td valign="top" class="padding_a padTopNone bdrBtm_grey w33pcnt">
+              <div class="fieldValue">200</div>
+              <img src="images/up_arrow_green.png" class="arrowDir"  alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Recharge</div>
+              
+              
+         </td>
+        </tr>
+        
+        <!-- Data row 5 and 6-->
+        <tr>
+          <td class="padding_a" valign="middle" colspan="3">
+         <div class="fieldDescription text-uppercase">stock</div>
+          </td>
+        </tr>
+        <tr>
+         <td valign="top" class="padding_a padTopNone bdrRight_grey w33pcnt">
+              <div class="fieldValue">900</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Device</div>
+              
+              
+         </td>
+          <td valign="top" class="padding_a padTopNone bdrRight_grey w33pcnt">
+              <div class="fieldValue">700</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">SIM</div>
+              
+              
+         </td>
+         <td valign="top" class="padding_a padTopNone  w33pcnt">
+              <div class="fieldValue">200</div>
+              <img src="images/up_arrow_yellow.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Recharge</div>
+              
+              
+         </td>
+        </tr>
+        
+        
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor7">
+         <td colspan="2" class="header">
+          Business Finance
+          </td>
+          
+        </tr>
+        
+        <!-- Data row 1 and 2-->
+        
+        <tr>
+         <td class="padding_a w50pcnt bdrRight_grey bdrBtm_grey">
+              <div class="fieldValue">20</div>
+              <div class="unit">Lacs</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Total Revenue</div>
+              
+         </td>
+          <td class="padding_a bdrBtm_grey">
+               <div class="fieldValue">30</div>
+              <div class="unit">Lacs</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Data Revenue</div>
+         </td>
+        </tr>
+        
+        <!-- Data Row 3 and 4 -->
+        
+        <tr>
+         <td class="padding_a bdrBtm_grey" colspan="2">
+              <div class="fieldValue">87%</div>
+              <img src="images/down_arrow_red.png" class="arrowDir" alt="down arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">% Bill collections</div>
+         </td>
+          
+        </tr>
+        
+        <!-- Data row 5 and 6-->
+        
+        <tr>
+         <td class="padding_a" colspan="2">
+              <div class="fieldValue">5%</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Subscriber acquisition cost per connection</div>
+         </td>
+          
+        </tr>
+        
+        
+        
+        </table>
+        </div>
+        
+        <div class="content_holder">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <!-- Header row -->
+        <tr class="headerColor8">
+         <td class="header">Network</td>
+        </tr>
+        
+        
+        <!-- Data Row 1-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle">
+            <table align="left" class="w60pcnt">
+              <tr>
+              <td>
+              <div class="fieldValue">1,000</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">eNodeB Rollout</div>
+              </td>
+              
+              </tr>
+              
+              
+              
+            </table>
+            <table align="right">
+               <tr valign="middle" align="center">
+                 <td valign="middle" align="center" style="text-align:center"><img src="images/satellite_icon.png" alt="cell satellite icon" style="margin:10px 0 0 0;"/></td>
+               </tr>
+            </table>
+         
+         </td>
+        </tr>
+        
+        <!-- Data row 3-->
+        <tr>
+        <td class="padding_a bdrBtm_grey" valign="middle">
+            <table align="left" class="w60pcnt">
+              <tr>
+              <td>
+              <div class="fieldValue">98.5%</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">% Availability</div>
+              </td>
+              
+              </tr>
+              
+              
+              
+            </table>
+            <table align="right">
+               <tr align="center" valign="middle">
+                 <td valign="middle" align="center" style="text-align:center"><img src="images/tower_icon.png" alt="tower icon" style="margin:10px 0 0 0;"/></td>
+               </tr>
+            </table>
+         
+         </td>
+        </tr>
+        
+        <!-- Data row 4-->
+        <tr>
+         <td class="padding_a bdrBtm_grey" valign="middle">
+            <table align="left" class="w60pcnt">
+              <tr>
+              <td>
+              <div class="fieldValue">14</div>
+               <div class="unit">Mbps</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Downlink Speed</div>
+              </td>
+              
+              </tr>
+              
+              
+              
+            </table>
+            <table align="right">
+               <tr valign="middle" align="center">
+                 <td valign="middle" align="center" style="text-align:center"><img src="images/download_icon.png" alt="Download icon" style="margin:10px 0 0 0;"/></td>
+               </tr>
+            </table>
+         
+         </td>
+        </tr>
+        
+        <!-- Data row 5-->
+        <tr>
+          <td class="padding_a" valign="middle">
+            <table align="left" class="w60pcnt">
+              <tr>
+              <td>
+              <div class="fieldValue">9</div>
+               <div class="unit">Mbps</div>
+              <img src="images/up_arrow_green.png" class="arrowDir" alt="up arrow"/>
+              <div  class="clearBoth"></div>
+              <div class="fieldDescription">Uplink Speed</div>
+              </td>
+              
+              </tr>
+              
+              
+              
+            </table>
+            <table align="right">
+               <tr valign="middle" align="center">
+                 <td valign="middle" align="center" style="text-align:center"><img src="images/upload_icon.png" alt="upload icon" style="margin:10px 0 0 0;"/></td>
+               </tr>
+            </table>
+         
+         </td>
+        </tr>
+        
+        
+        </table>
+        </div>
+    
+    
+    </div>
+    </div>
+    
+</div>
+    
+    
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/jquery.sparkline.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/script.js"></script>    
+    
+</body>
+
+
+</html>
