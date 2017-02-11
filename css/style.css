@@ -283,7 +283,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 /* Content profile section */
 
-.content-section{ background:#FFFFFF; padding:30px; overflow:hidden;}
+.content-section{ background:#FFFFFF; padding:30px; overflow:hidden; min-height: 600px;}
 
 h2{
     font-size: 32px;
