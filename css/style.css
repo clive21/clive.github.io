@@ -666,11 +666,11 @@ footer p {
 	height: auto;
 	background: #fff;
 	border: 1px solid #ddd;
-	margin: 0 auto;
+	margin: 20px auto;
 	-moz-box-shadow: 0 0 8px #aaa;
 	-webkit-box-shadow: 0 0 8px #aaa;
 	box-shadow: 0 0 8px #aaa;
-	padding: 20px 20px 0;
+	padding: 15px;
 }
 
 .statusMessage p {
@@ -690,7 +690,7 @@ footer p {
 	float: left;
 	margin-right: 15px;
 	position: relative;
-	top: -6px;
+	top: 0px;
 }
 
 .error-ico {
@@ -700,7 +700,7 @@ footer p {
 	float: left;
 	margin-right: 15px;
 	position: relative;
-	top: -6px;
+	top: 0px;
 }
 
 .errormessage p {
