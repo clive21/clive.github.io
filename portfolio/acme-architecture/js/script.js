@@ -373,8 +373,7 @@ $(function(){
 	toggle_panel();
 	other_projects();
 	
-		
-	
+
 	
 /* highlight respective menu item when scroll to section */
 	
