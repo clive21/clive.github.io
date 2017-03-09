@@ -339,6 +339,7 @@ var toggle_panel = function(){
 								 
 
 var dropdownHover = function(){
+  
     $(".dropdown").hover(            
             function() {
                 $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
@@ -348,6 +349,7 @@ var dropdownHover = function(){
                 $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
                 $(this).toggleClass('open');            
             });
+	  
 };
 
 
@@ -377,8 +379,11 @@ $(function(){
 	
 /* highlight respective menu item when scroll to section */
 	
-if( $("#nav-menu").exists() )  {	
+if( $("#nav-menu").exists() )  {
 	
+	 if($(window).width() > 1024)
+		 
+	   {
 					
 		// Cache selectors
 				var lastId,
@@ -407,6 +412,7 @@ if( $("#nav-menu").exists() )  {
 				
 				// Bind to scroll
 				$(window).scroll(function(){
+					
 				   // Get container scroll position
 				   var fromTop = $(this).scrollTop()+topMenuHeight;
 				   
@@ -425,11 +431,15 @@ if( $("#nav-menu").exists() )  {
 					   menuItems
 						 .parent().removeClass("active")
 						 .end().filter("[href=#"+id+"]").parent().addClass("active");
-				   }                   
+				   } 
+					
+					
+					
+					
 				});
 		
 			
-	
+	 }
 	
 }
 		
