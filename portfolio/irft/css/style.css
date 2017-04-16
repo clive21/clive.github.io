@@ -328,6 +328,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .dropdown-menu>li>a {
     padding: 10px 20px;
     color: #777;
+    border-bottom: 1px solid #ddd;
   }
   
  .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
@@ -574,7 +575,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 
 /********************  Panels ******************/
-.panel{margin: 0 0 30px 0; border-radius: 0;}
+.panel{margin: 0 0 30px 0; border-radius: 0; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);}
 .panel-body.links a{display: block; margin:0 0 10px 0; padding:0 15px; position: relative;}
 .panel-body.links a:before {
     content: "\f04b";
@@ -589,7 +590,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     transition: all ease .238s;
 }
 
-
+.panel-default>.panel-heading{color: #252525;}
 
 
 
