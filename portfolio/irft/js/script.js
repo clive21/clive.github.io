@@ -94,6 +94,10 @@ var item_slider = function() {
 		  infinite: false,
 		  slidesToShow: 3,
 		  slidesToScroll: 3,
+		  autoplay:true,
+		  autoplaySpeed: 5000,
+		  pauseOnHover:false,
+		  speed: 2000,	
 		  dots: true,
 	      responsive: [
 				{
