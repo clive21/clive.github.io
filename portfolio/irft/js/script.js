@@ -97,7 +97,7 @@ var item_slider = function() {
 		  autoplay:true,
 		  autoplaySpeed: 5000,
 		  pauseOnHover:false,
-		  speed: 2000,	
+		  speed: 1000,	
 		  dots: true,
 	      responsive: [
 				{
