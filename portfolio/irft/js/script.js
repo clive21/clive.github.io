@@ -164,7 +164,18 @@ $(function(){
 	mobile_nav_arrow();
 	
 	
-	
+
+ /* Add highlight to parent when hover on child items*/	 
+  if ($(window).width() >= 1024){	
+	$(".nav .dropdown-menu").hover(
+	  function(){ // Mouse Over
+	   $(this).parent().addClass("open");
+	  },
+	  function(){ // Mouse Out
+		$(this).parent().removeClass("open");
+	  }
+	);
+  }
 	
 	
 	
