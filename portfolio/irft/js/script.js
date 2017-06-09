@@ -180,22 +180,77 @@ $(function(){
 	
 	
 	
+/* Ligthbox plugins*/
 	
-	/* Ligthbox plugins*/
-	
+/*
 	if ( $().fancybox ) {
 	    $(".fancybox").fancybox({
 			padding : 0
 		});
 	}
-	
-	
+*/
+
+
+/*	
 	if ( $().swipebox ) {
 	    $(".swipebox").swipebox({
 			   removeBarsOnMobile : false,
 			   hideBarsDelay : 0
 			});
 	}
+ */
+	
+	
+/* http://dimsemenov.com/plugins/magnific-popup/documentation.html	*/
+	
+	if ( $().magnificPopup ) {
+	    $(".popup-image").magnificPopup({
+          type: 'image',
+          closeBtnInside: false,
+          fixedContentPos: true,
+          mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+          image: {
+            verticalFit: false
+          },
+          zoom: {
+            enabled: true,
+            duration: 300 
+          }
+        });
+  	}
+	
+	
+	if ( $().magnificPopup ) {
+		$('.gallery').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+				delegate: 'a', // the selector for gallery item
+				type: 'image',
+				gallery: {
+				  enabled:true
+				},
+				 zoom: {
+					enabled: true,
+					duration: 300 
+				}
+			});
+	    });
+	
+	}
+	
+	
+	
+	if ( $().magnificPopup ) {
+		 $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+			  disableOn: 700,
+			  type: 'iframe',
+			  mainClass: 'mfp-fade',
+			  removalDelay: 160,
+			  preloader: false,
+			  fixedContentPos: false
+	    });
+	
+	}
+	
 	
 	
 	if ($(window).width() <= 1024){	
